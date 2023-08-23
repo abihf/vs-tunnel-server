@@ -8,5 +8,6 @@ services:
     image: ghcr.io/abihf/vs-tunnel-server:latest
     volumes:
       - "/home/abi/vs-tunnel:/home/ubuntu"
+      - /var/run/docker.sock:/var/run/docker.sock
     hostname: vshome
     dns: [192.168.100.13]
