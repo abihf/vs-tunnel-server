@@ -5,9 +5,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: ghcr.io/abihf/vs-tunnel-server:latest
+    image: abihf/vscode-server:latest
     volumes:
       - "/home/abi/vs-tunnel:/home/ubuntu"
       - /var/run/docker.sock:/var/run/docker.sock
     hostname: vshome
     dns: [192.168.100.13]
+    ports:
+      - 8000:8000

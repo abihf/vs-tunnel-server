@@ -4,4 +4,4 @@ if [ -d /home/linuxbrew/.linuxbrew ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
-exec code tunnel
+exec /usr/local/bin/supervisord -c /etc/supervisor.conf
