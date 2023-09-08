@@ -35,8 +35,6 @@ RUN groupadd -g 971 -r docker && \
 
 ADD --link --chmod=0755 "https://github.com/krallin/tini/releases/download/v0.19.0/tini-amd64" /tini
 COPY --link --from=supervisord /supervisord /usr/local/bin/
-RUN curl -sL "https://code.visualstudio.com/sha/download?build=insider&os=cli-alpine-x64" | tar xvzC /usr/local/bin/
-# COPY --link --from=code-cli /code-insiders /usr/local/bin/
 ADD --chmod=0755 entrypoint.sh /entrypoint.sh
 ADD --chmod=0644 supervisor.conf /etc/
 
