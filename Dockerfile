@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ubuntu:24.04
+ARG BASE_IMAGE=ubuntu:23.10
 
 # FROM ${BASE_IMAGE} AS code-cli
 # ENV test=1
